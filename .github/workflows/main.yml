@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
     - uses: actions/checkout@master
-    - uses: .
+    - uses: './surge-sphinx-action'
       env:
         BUILD_DIR: $(echo $pwd '/_build')
