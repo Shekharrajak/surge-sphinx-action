@@ -4,8 +4,9 @@ on: [push, pull_request]
 jobs:
   build:
     name: Surge Sphinx action
-    runs-on: ubuntu-latest    
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
+    - uses: './surge-sphinx-action'
       env:
-        BUILD_DIR: $(echo $pwd '/_build')
+        BUILD_DIR: $(echo $PWD'/_build')
